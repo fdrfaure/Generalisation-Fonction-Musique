@@ -1,0 +1,1145 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{a4wide}
+\usepackage{color}
+\usepackage{graphics}
+
+\usepackage{amsmath, amsthm, amssymb}
+
+ 
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\end_preamble
+\options PSfrag
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+tabs-within-sections
+theorems-sec
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language french
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Ensemble de notes
+\end_layout
+
+\begin_layout Date
+14 décembre 2016
+\end_layout
+
+\begin_layout Author
+Malik Mezzadri
+\shape italic
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Malik Mezzadri"
+target "http://fr.wikipedia.org/wiki/Malik_Mezzadri"
+
+\end_inset
+
+ musicien flûtiste de Jazz, compositeur.
+ Nom d'artiste
+\emph on
+: 
+\begin_inset Quotes eld
+\end_inset
+
+Magic Malik
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+.
+\end_layout
+
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Abstract
+Un objet est un ensemble de notes parmi les 
+\begin_inset Formula $12$
+\end_inset
+
+ notes de la gamme chromatique à tempérament égal.
+ En considérant les propriétés de périodicité des objets par transposition,
+ on distingue trois ensembles d'objets notés 
+\begin_inset Formula $II,V,I$
+\end_inset
+
+ et on présente les relations d'inclusion entre ces ensembles.
+\end_layout
+
+\begin_layout Section
+Définitions et propriétés
+\end_layout
+
+\begin_layout Subsection
+Objets et périodes
+\end_layout
+
+\begin_layout Standard
+On note 
+\begin_inset Formula 
+\[
+\mathbb{Z}_{12}=\mathbb{Z}/\left(12\mathbb{Z}\right)=\left\{ 0,1,2,\ldots11\right\} 
+\]
+
+\end_inset
+
+ l'ensemble des douze notes de la gamme chromatique modulo l'octave.
+ Pour signifier leur utilisation à la gamme chromatique, on associe à chaque
+ élément un symbole de la suite:
+\begin_inset Formula 
+\[
+\left\{ C,C\#,D,D\#,E,F,F\#,G,G\#,A,A\#,B\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $U=\left(u_{1},u_{2},\ldots u_{n}\right)\subset\mathbb{Z}_{12}$
+\end_inset
+
+ est un sous ensemble de 
+\begin_inset Formula $n$
+\end_inset
+
+ notes, 
+\begin_inset Formula $U\in\left\{ 0,1\right\} ^{\mathbb{Z}_{12}}$
+\end_inset
+
+.
+ On note 
+\begin_inset Formula $\mathcal{T}_{k}U:=U+k:=\left\{ u_{1}+k,\ldots u_{n}+k\right\} \subset\mathbb{Z}_{12}$
+\end_inset
+
+ la 
+\series bold
+transposition
+\series default
+ de 
+\begin_inset Formula $U$
+\end_inset
+
+ par 
+\begin_inset Formula $k\in\mathbb{Z}_{12}$
+\end_inset
+
+.
+ On introduit la relation d'équivalence entre deux sous ensembles: 
+\begin_inset Formula 
+\[
+U'\sim U\overset{\mathrm{def.}}{\Leftrightarrow}\exists k\in\mathbb{Z}_{12},U'=\mathcal{T}_{k}U.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Par exemple 
+\begin_inset Formula $U=\left\{ C,D,E\right\} $
+\end_inset
+
+ est équivalent à 
+\begin_inset Formula $U'=\left\{ E,F\#,G\#\right\} $
+\end_inset
+
+ car 
+\begin_inset Formula $U'$
+\end_inset
+
+ est une transposition de 
+\begin_inset Formula $U$
+\end_inset
+
+ par 
+\begin_inset Formula $k=4$
+\end_inset
+
+ demi-tons.
+\end_layout
+
+\begin_layout Standard
+Un
+\series bold
+ objet
+\series default
+ 
+\begin_inset Formula $o$
+\end_inset
+
+ est une classe d'équivalence c'est à dire un ensemble de notes modulo transposi
+tion:
+\begin_inset Formula 
+\[
+o\in\mathcal{O}:=\left\{ 0,1\right\} ^{\mathbb{Z}_{12}}/\sim
+\]
+
+\end_inset
+
+La 
+\series bold
+période
+\series default
+ 
+\begin_inset Formula $T\left(U\right)\in\mathbb{Z}_{12}$
+\end_inset
+
+ de 
+\begin_inset Formula $U$
+\end_inset
+
+ est
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+noter que 
+\begin_inset Formula $T\left(U\right)$
+\end_inset
+
+ est un sous groupe de 
+\begin_inset Formula $\mathbb{Z}_{12}$
+\end_inset
+
+ parmi 
+\begin_inset Formula $\left\{ 0\right\} ,\left\{ 0,6\right\} ,\left\{ 0,4,8\right\} ,\left\{ 0,3,6,9\right\} ,\left\{ 0,2,4,6,8\right\} ,\mathbb{Z}_{12}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T\left(U\right):=\left\{ k\in\mathbb{Z}_{12},\quad\mathcal{T}_{k}U=U\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La période est constante dans une classe d'équivalence, on note 
+\begin_inset Formula $T\left(o\right):=T\left(U\right)$
+\end_inset
+
+ la période d'un objet 
+\begin_inset Formula $o$
+\end_inset
+
+ de représentant 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Par exemple
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+La période de 
+\begin_inset Formula $U=\left\{ C,D,E,F\#,G\#,A\#\right\} $
+\end_inset
+
+ (la 
+\begin_inset Quotes fld
+\end_inset
+
+gamme par ton
+\begin_inset Quotes frd
+\end_inset
+
+) est 
+\begin_inset Formula $T\left(U\right)=\left\{ 0,2,4,6,8\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La période de 
+\begin_inset Formula $U=\left\{ D,G\#\right\} $
+\end_inset
+
+ est 
+\begin_inset Formula $T\left(U\right)=\left\{ 0,6\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La période de 
+\begin_inset Formula $U=\left\{ C,D,E,F,G,A,B\right\} $
+\end_inset
+
+ (la gamme majeur) est 
+\begin_inset Formula $T\left(U\right)=\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Dans la proposition suivante on identifie la période 
+\begin_inset Formula $T\left(o\right)$
+\end_inset
+
+ avec son générateur.
+ Par exemple 
+\begin_inset Formula $1$
+\end_inset
+
+ est le générateur de 
+\begin_inset Formula $\mathbb{Z}_{12}$
+\end_inset
+
+, 
+\begin_inset Formula $2$
+\end_inset
+
+ est le générateur de 
+\begin_inset Formula $\left\{ 0,2,4,6,8\right\} $
+\end_inset
+
+ etc.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status open
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:L'ensemble--contient"
+
+\end_inset
+
+L'ensemble 
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+ contient 
+\begin_inset Formula $352$
+\end_inset
+
+ objets dont
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Période 
+\begin_inset Formula $T$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $12$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nombre d'objets
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $335$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Ce résultat s'obtient par énumération des objets.
+ On l'obtient avec un programme disponible sur GitHub 
+\begin_inset Quotes fld
+\end_inset
+
+kanular/Generalisation-Fonction-Musique
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Le programme génère un fichier de sortie qui liste tous les objets et leur
+ propriétés.
+\end_layout
+
+\begin_layout Subsection
+Objets symétriques et non symétriques
+\end_layout
+
+\begin_layout Standard
+On dit que 
+\begin_inset Formula $o$
+\end_inset
+
+ est un 
+\series bold
+objet non symétrique
+\series default
+ si 
+\begin_inset Formula $T\left(o\right)=\left\{ 0\right\} $
+\end_inset
+
+.
+ On note 
+\begin_inset Formula 
+\[
+A:=\left\{ o\in\mathcal{O},\,T\left(o\right)=\left\{ 0\right\} \right\} \subset\mathcal{O}
+\]
+
+\end_inset
+
+l'ensemble des objets non symétriques.
+ D'après la Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:L'ensemble--contient"
+
+\end_inset
+
+ il y a 
+\begin_inset Formula $335$
+\end_inset
+
+ objets dans 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Les autres objets sont appelés 
+\series bold
+symétriques
+\series default
+ et on note 
+\begin_inset Formula 
+\[
+B:=\mathcal{O}\backslash A.
+\]
+
+\end_inset
+
+l'ensemble des objets symétriques.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $o,o'\in\mathcal{O}$
+\end_inset
+
+ sont deux objets, on note
+\begin_inset Formula 
+\[
+o\subset o'\overset{\mathrm{def.}}{\Leftrightarrow}\forall U\in o,\forall U'\in o',\exists k\in\mathbb{Z}_{12},U+k\subset U',
+\]
+
+\end_inset
+
+i.e.
+ si 
+\begin_inset Quotes fld
+\end_inset
+
+l'objet 
+\begin_inset Formula $o$
+\end_inset
+
+ est
+\series bold
+ inclus
+\series default
+ dans l'objet 
+\begin_inset Formula $o'$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+On note
+\begin_inset Formula 
+\[
+I:=\left\{ o\in A,\forall o'\in B,o\subsetneq o'\Rightarrow o'=\mathbb{Z}_{12}\right\} 
+\]
+
+\end_inset
+
+i.e.
+ c'est l'ensemble des objets non symétriques qui ne sont inclus dans aucun
+ objet symétrique hormis la gamme chromatique.
+\end_layout
+
+\begin_layout Standard
+On note
+\begin_inset Formula 
+\[
+II:=A\backslash I
+\]
+
+\end_inset
+
+l'ensemble complémentaire c'est à dire les objets non symétriques qui sont
+ inclus dans un objet symétrique (autre que la gamme chromatique).
+\end_layout
+
+\begin_layout Standard
+Le
+\series bold
+ nombre de notes
+\series default
+ d'un objet est noté 
+\begin_inset Formula $\sharp o\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status open
+
+\begin_layout Proposition
+L'ensemble 
+\begin_inset Formula $I$
+\end_inset
+
+ contient 
+\begin_inset Formula $52$
+\end_inset
+
+ objets dont
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nombre de notes:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $11$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nombre d'objets dans 
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $12$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $18$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $13$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proposition
+Voici les trois objets 
+\begin_inset Quotes fld
+\end_inset
+
+minimaux
+\begin_inset Quotes frd
+\end_inset
+
+ de 
+\begin_inset Formula $I$
+\end_inset
+
+ c'est à dire ayant 
+\begin_inset Formula $6$
+\end_inset
+
+ notes:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+C C# D D# E F
+\end_layout
+
+\begin_layout Enumerate
+C D D# E F G
+\end_layout
+
+\begin_layout Enumerate
+C D E F G A
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Ce résultat s'obtient par énumération des objets.
+ On l'obtient avec un programme disponible sur GitHub 
+\begin_inset Quotes fld
+\end_inset
+
+kanular/Generalisation-Fonction-Musique
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Le programme génère un fichier de sortie qui liste tous les objets et leur
+ propriétés.
+\end_layout
+
+\begin_layout Standard
+Remarquer que au contraire, pour tout objet symétrique 
+\begin_inset Formula $o\in B$
+\end_inset
+
+ il existe un objet 
+\begin_inset Formula $o'\in A$
+\end_inset
+
+ qui le contient 
+\begin_inset Formula $o\subset o'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $o,o'\in\mathcal{O}$
+\end_inset
+
+ sont deux objets, on introduit la relation: 
+\begin_inset Formula 
+\[
+o\rightarrow o'\overset{\mathrm{def.}}{\Leftrightarrow}o\subset o'\text{ et }\sharp o'=\sharp o+1,
+\]
+
+\end_inset
+
+i.e.
+ si 
+\begin_inset Formula $o'$
+\end_inset
+
+ s'obtient à partir de 
+\begin_inset Formula $o$
+\end_inset
+
+ par l'
+\series bold
+ajout d'une note
+\series default
+.
+\end_layout
+
+\begin_layout Section
+Interprétation en musique
+\end_layout
+
+\begin_layout Standard
+Si on note 
+\begin_inset Formula $V:=B$
+\end_inset
+
+ l'ensemble des objets symétriques, le 
+\series bold
+dynamisme orienté
+\series default
+ considère le mouvement
+\begin_inset Formula 
+\[
+II\rightarrow V\rightarrow I.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ce dynamisme est économe, il choisit les solutions ou l'ajout de note est
+ minimum en fonction des opérateurs choisis.
+\end_layout
+
+\end_body
+\end_document

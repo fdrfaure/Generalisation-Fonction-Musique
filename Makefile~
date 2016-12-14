@@ -1,0 +1,30 @@
+# --- fichier Makefile
+
+
+# .... librairies
+
+LIBR=$(shell root-config --libs) $(shell root-config --glibs) -lm -lpthread -lsndio -larmadillo -std=c++11 -lboost_system 
+
+
+# ... instructions de compilation
+
+CC =g++ -std=c++11 $(shell root-config --cflags) # compilateur
+
+OBJETS= main.o 
+
+
+main.o: main.cc 
+	$(CC) -c  $*.cc -o $@ 
+
+
+
+all: main.o
+	$(CC) $(OBJETS) -o main $(LIBR)
+
+
+lib:
+	ar r main
+
+
+clean:
+	rm *.o

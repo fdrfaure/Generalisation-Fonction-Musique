@@ -1,0 +1,11 @@
+Commande de compilation:
+========================
+make
+
+Execution du programme:
+=======================
+./main
+
+Fichier de sortie:
+==================
+objets_de_Malik.txt

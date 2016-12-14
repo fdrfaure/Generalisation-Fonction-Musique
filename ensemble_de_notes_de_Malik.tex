@@ -1,0 +1,242 @@
+%% LyX 2.2.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,a4paper,french,PSfrag]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{xcolor}
+\usepackage{babel}
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
+
+\makeatother
+\usepackage{calc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\usepackage{breakurl}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\special{papersize=\the\paperwidth,\the\paperheight}
+
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}[section]
+  \theoremstyle{definition}
+  \newtheorem{example}[thm]{\protect\examplename}
+  \theoremstyle{plain}
+  \newtheorem{prop}[thm]{\protect\propositionname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{a4wide}
+\usepackage{color}
+\usepackage{graphics}
+
+\usepackage{amsmath, amsthm, amssymb}
+
+ 
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+
+\makeatother
+
+  \providecommand{\examplename}{Exemple}
+  \providecommand{\propositionname}{Proposition}
+\providecommand{\theoremname}{Théorème}
+
+\begin{document}
+
+\title{Ensemble de notes}
+
+\date{14 décembre 2016}
+
+\author{Malik Mezzadri\textit{}\thanks{\protect\href{http://fr.wikipedia.org/wiki/Malik_Mezzadri}{Malik Mezzadri}
+musicien flûtiste de Jazz, compositeur. Nom d'artiste\emph{: ``Magic
+Malik''}.}\textit{,}}
+\maketitle
+\begin{abstract}
+Un objet est un ensemble de notes parmi les $12$ notes de la gamme
+chromatique à tempérament égal. En considérant les propriétés de périodicité
+des objets par transposition, on distingue trois ensembles d'objets
+notés $II,V,I$ et on présente les relations d'inclusion entre ces
+ensembles.
+\end{abstract}
+
+\section{Définitions et propriétés}
+
+\subsection{Objets et périodes}
+
+On note 
+\[
+\mathbb{Z}_{12}=\mathbb{Z}/\left(12\mathbb{Z}\right)=\left\{ 0,1,2,\ldots11\right\} 
+\]
+ l'ensemble des douze notes de la gamme chromatique modulo l'octave.
+Pour signifier leur utilisation à la gamme chromatique, on associe
+à chaque élément un symbole de la suite:
+\[
+\left\{ C,C\#,D,D\#,E,F,F\#,G,G\#,A,A\#,B\right\} .
+\]
+
+Si $U=\left(u_{1},u_{2},\ldots u_{n}\right)\subset\mathbb{Z}_{12}$
+est un sous ensemble de $n$ notes, $U\in\left\{ 0,1\right\} ^{\mathbb{Z}_{12}}$.
+On note $\mathcal{T}_{k}U:=U+k:=\left\{ u_{1}+k,\ldots u_{n}+k\right\} \subset\mathbb{Z}_{12}$
+la \textbf{transposition} de $U$ par $k\in\mathbb{Z}_{12}$. On introduit
+la relation d'équivalence entre deux sous ensembles: 
+\[
+U'\sim U\overset{\mathrm{def.}}{\Leftrightarrow}\exists k\in\mathbb{Z}_{12},U'=\mathcal{T}_{k}U.
+\]
+
+\begin{example}
+Par exemple $U=\left\{ C,D,E\right\} $ est équivalent à $U'=\left\{ E,F\#,G\#\right\} $
+car $U'$ est une transposition de $U$ par $k=4$ demi-tons.
+\end{example}
+Un\textbf{ objet} $o$ est une classe d'équivalence c'est à dire un
+ensemble de notes modulo transposition:
+\[
+o\in\mathcal{O}:=\left\{ 0,1\right\} ^{\mathbb{Z}_{12}}/\sim
+\]
+La \textbf{période} $T\left(U\right)\in\mathbb{Z}_{12}$ de $U$ est\footnote{noter que $T\left(U\right)$ est un sous groupe de $\mathbb{Z}_{12}$
+parmi $\left\{ 0\right\} ,\left\{ 0,6\right\} ,\left\{ 0,4,8\right\} ,\left\{ 0,3,6,9\right\} ,\left\{ 0,2,4,6,8\right\} ,\mathbb{Z}_{12}$.}
+\[
+T\left(U\right):=\left\{ k\in\mathbb{Z}_{12},\quad\mathcal{T}_{k}U=U\right\} .
+\]
+
+La période est constante dans une classe d'équivalence, on note $T\left(o\right):=T\left(U\right)$
+la période d'un objet $o$ de représentant $U$.
+\begin{example}
+Par exemple
+\begin{itemize}
+\item La période de $U=\left\{ C,D,E,F\#,G\#,A\#\right\} $ (la \og gamme
+par ton \fg{}) est $T\left(U\right)=\left\{ 0,2,4,6,8\right\} $.
+\item La période de $U=\left\{ D,G\#\right\} $ est $T\left(U\right)=\left\{ 0,6\right\} $.
+\item La période de $U=\left\{ C,D,E,F,G,A,B\right\} $ (la gamme majeur)
+est $T\left(U\right)=\left\{ 0\right\} $.
+\end{itemize}
+\end{example}
+Dans la proposition suivante on identifie la période $T\left(o\right)$
+avec son générateur. Par exemple $1$ est le générateur de $\mathbb{Z}_{12}$,
+$2$ est le générateur de $\left\{ 0,2,4,6,8\right\} $ etc. 
+
+\noindent\fcolorbox{blue}{white}{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 2\fboxrule}%
+\begin{prop}
+\label{prop:L'ensemble--contient}L'ensemble $\mathcal{O}$ contient
+$352$ objets dont
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+Période $T$: & $1$ & $2$ & $3$ & $4$ & $6$ & $12$\tabularnewline
+\hline 
+Nombre d'objets & $2$ & $1$ & $2$ & $3$ & $9$ & $335$\tabularnewline
+\hline 
+\end{tabular}
+\par\end{center}
+\end{prop}
+%
+\end{minipage}}
+\begin{proof}
+Ce résultat s'obtient par énumération des objets. On l'obtient avec
+un programme disponible sur GitHub \og kanular/Generalisation-Fonction-Musique \fg{}.
+Le programme génère un fichier de sortie qui liste tous les objets
+et leur propriétés.
+\end{proof}
+
+\subsection{Objets symétriques et non symétriques}
+
+On dit que $o$ est un \textbf{objet non symétrique} si $T\left(o\right)=\left\{ 0\right\} $.
+On note 
+\[
+A:=\left\{ o\in\mathcal{O},\,T\left(o\right)=\left\{ 0\right\} \right\} \subset\mathcal{O}
+\]
+l'ensemble des objets non symétriques. D'après la Proposition \ref{prop:L'ensemble--contient}
+il y a $335$ objets dans $A$. Les autres objets sont appelés \textbf{symétriques}
+et on note 
+\[
+B:=\mathcal{O}\backslash A.
+\]
+l'ensemble des objets symétriques.
+
+Si $o,o'\in\mathcal{O}$ sont deux objets, on note
+\[
+o\subset o'\overset{\mathrm{def.}}{\Leftrightarrow}\forall U\in o,\forall U'\in o',\exists k\in\mathbb{Z}_{12},U+k\subset U',
+\]
+i.e. si \og l'objet $o$ est\textbf{ inclus} dans l'objet $o'$ \fg{}.
+
+On note
+\[
+I:=\left\{ o\in A,\forall o'\in B,o\subsetneq o'\Rightarrow o'=\mathbb{Z}_{12}\right\} 
+\]
+i.e. c'est l'ensemble des objets non symétriques qui ne sont inclus
+dans aucun objet symétrique hormis la gamme chromatique.
+
+On note
+\[
+II:=A\backslash I
+\]
+l'ensemble complémentaire c'est à dire les objets non symétriques
+qui sont inclus dans un objet symétrique (autre que la gamme chromatique).
+
+Le\textbf{ nombre de notes} d'un objet est noté $\sharp o\in\mathbb{N}$.
+
+\noindent\fcolorbox{blue}{white}{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 2\fboxrule}%
+\begin{prop}
+L'ensemble $I$ contient $52$ objets dont
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+Nombre de notes: & $6$ & $7$ & $8$ & $9$ & $10$ & $11$\tabularnewline
+\hline 
+Nombre d'objets dans $I$ & $3$ & $12$ & $18$ & $13$ & $5$ & $1$\tabularnewline
+\hline 
+\end{tabular}
+\par\end{center}
+
+Voici les trois objets \og minimaux \fg{} de $I$ c'est à dire ayant
+$6$ notes:
+\begin{enumerate}
+\item C C\# D D\# E F
+\item C D D\# E F G
+\item C D E F G A
+\end{enumerate}
+\end{prop}
+%
+\end{minipage}}
+\begin{proof}
+Ce résultat s'obtient par énumération des objets. On l'obtient avec
+un programme disponible sur GitHub \og kanular/Generalisation-Fonction-Musique \fg{}.
+Le programme génère un fichier de sortie qui liste tous les objets
+et leur propriétés.
+\end{proof}
+Remarquer que au contraire, pour tout objet symétrique $o\in B$ il
+existe un objet $o'\in A$ qui le contient $o\subset o'$.
+
+Si $o,o'\in\mathcal{O}$ sont deux objets, on introduit la relation:
+\[
+o\rightarrow o'\overset{\mathrm{def.}}{\Leftrightarrow}o\subset o'\text{ et }\sharp o'=\sharp o+1,
+\]
+i.e. si $o'$ s'obtient à partir de $o$ par l'\textbf{ajout d'une
+note}.
+
+\section{Interprétation en musique}
+
+Si on note $V:=B$ l'ensemble des objets symétriques, le \textbf{dynamisme
+orienté} considère le mouvement
+\[
+II\rightarrow V\rightarrow I.
+\]
+
+Ce dynamisme est économe, il choisit les solutions ou l'ajout de note
+est minimum en fonction des opérateurs choisis.
+\end{document}
